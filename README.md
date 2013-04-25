@@ -41,7 +41,7 @@ Discovered the following job parameters:
     cf_instances: Integer (default: 1)
 
     create jobs/deploy_cloud_foundry_app/config.xml
-    create config/jenkins/deploy_cloud_foundry_app.yml
+    create spec/config/deploy_cloud_foundry_app.yml
     create spec/integration/deploy_cloud_foundry_app_spec.rb
 
 # Run a local Jenkins server for integration tests
