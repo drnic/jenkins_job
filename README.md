@@ -89,6 +89,16 @@ To install "deploy_cloudfoundry_app" to your Jenkins server:
    $ jenkins_job install deploy_cloudfoundry_app -j http://me:mypass@jenkins.coolcompany.com
 ```
 
+Alternately they can install it from the project source.
+
+```
+$ git clone git://github.com/YOURNAME/deploy_cloudfoundry_app-jenkinsjob.git
+$ cd deploy_cloudfoundry_app-jenkinsjob
+$ bundle install
+$ jenkins_job install # install all included jobs
+$ jenkins_job install deploy_cloudfoundry_app # install specific job
+```
+
 ## Dependencies
 
 This tool requires Ruby 1.9 & RubyGems to be installed; and Java 1.6+ installed to use the built-in testing harness (to run Jenkins and test your Jobs)
