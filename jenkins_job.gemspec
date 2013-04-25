@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Dr Nic Williams"]
   spec.email         = ["drnicwilliams@gmail.com"]
   spec.description   = %q{Create and test a Jenkins job; then share the Job with others via a simple installer}
-  spec.summary       = %q{Create and test a Jenkins job; then share the Job with others via a simple installer}
+  spec.summary       = %q{Create, test or TDD your Jenkins jobs and parameterized jobs; and then make them dead simple for other people to install.}
   spec.homepage      = ""
   spec.license       = "MIT"
 
