@@ -1,0 +1,12 @@
+language: ruby
+script: "bundle exec rake spec:unit && bundle exec rake jenkins:start && bundle exec rake jenkins:wait_til_started && bundle exec rake spec:integration"
+rvm:
+  - ruby-1.9.3
+notifications:
+  email:
+    recipients:
+      - drnicwilliams@gmail.com
+    on_success: change
+    on_failure: always
+  global:
+    - secure: ""
