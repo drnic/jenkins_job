@@ -44,6 +44,10 @@ Discovered the following job parameters:
     create config/jenkins/deploy_cloud_foundry_app.yml
     create spec/integration/deploy_cloud_foundry_app_spec.rb
 
+# Run a local Jenkins server for integration tests
+$ rake jenkins:start
+$ rake jenkins:wait_til_started
+
 $ rake spec
 Downloading latest "Deploy Cloud Foundry App" to jobs/deploy_cloud_foundry_app/config.xml... done.
 Running RSpec:
@@ -53,7 +57,6 @@ Running RSpec:
 ```
 
 You can develop, test and package one or more Jenkins jobs.
-
 
 ### Packaging and release
 
@@ -65,6 +68,12 @@ First, edit `lib/deploy_cloudfoundry_app/version.rb` to increment the versioning
 $ rake release
 Releasing deploy_cloudfoundry_app-jenkinsjob v1.0.0
 ```
+
+### Continuous integration
+
+Each project generated from `jenkins_job new` includes a `.travis.yml` for running the test suite within the free https://travis-ci.org/. You only need to set up a [Service Hook on your Git host](http://about.travis-ci.org/docs/user/getting-started/#Step-two%3A-Activate-GitHub-Service-Hook "Travis CI: Getting started").
+
+TODO: How do we support CloudBees' BuildHive?
 
 ### Share your job
 
